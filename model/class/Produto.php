@@ -3,15 +3,15 @@
 class Produto {
 
     private $idProduto;
-    private $produto;
+    private $nomeProduto;
     private $valor;
     private $estoque;
     private $descricao;
     private $idCategoria;
     
-    public function __construct($idProduto, $produto, $valor, $estoque, $descricao, $idCategoria) {
+    public function __construct($idProduto, $nomeProduto, $valor, $estoque, $descricao, $idCategoria) {
         $this->idProduto = $idProduto;
-        $this->produto = $produto;
+        $this->nomeProduto = $nomeProduto;
         $this->valor = $valor;
         $this->estoque = $estoque;
         $this->descricao = $descricao;
@@ -22,8 +22,8 @@ class Produto {
         return $this->idProduto;
     }
 
-    public function getProduto() {
-        return $this->produto;
+    public function getNomeProduto() {
+        return $this->nomeProduto;
     }
 
     public function getValor() {

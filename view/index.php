@@ -1,17 +1,19 @@
+<?php
+    require_once '../config/Global.php';
+?>
+
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>index</title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <a href="../view/categoria.php">Categoria</a><br />
+        <a href="../view/endereco.php">Endereço</a><br />
+        <a href="../view/item_pedido.php">Item Pedido</a><br />
+        <a href="../view/pedido.php">Pedido</a><br />
+        <a href="../view/produto.php">Produto</a><br />
+        <a href="../view/usuario.php">Usuáiro</a><br />
     </body>
 </html>

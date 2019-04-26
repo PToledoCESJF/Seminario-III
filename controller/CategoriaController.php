@@ -6,14 +6,14 @@ class CategoriaController implements iController{
         if($method === "salvar"){
             $categoria = new Categoria($idCategoria, $nomeCategoria);
             self::salvar($categoria);
-        }elseif($method === "excluir") {
-            self::excluir($idCategoria);
-        }elseif ($method === "vazio") {
-            return new Categoria(NULL, NULL);
         }
     }
     
-    public static function buscarPorId($idCategoria) {
+    public static function carregarVazio(){
+        return new Categoria(NULL, NULL);
+    }
+
+        public static function buscarPorId($idCategoria) {
         try {
             $stmt = CategoriaDao::buscarPorId($idCategoria);
             $categoria = new Categoria($stmt['id_categoria'], $stmt['nome_categoria']);

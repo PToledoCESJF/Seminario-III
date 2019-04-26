@@ -3,19 +3,19 @@
 class Categoria {
     
     private $idCategoria;
-    private $categoria;
+    private $nomeCategoria;
     
-    public function __construct($idCategoria, $categoria) {
+    public function __construct($idCategoria, $nomeCategoria) {
         $this->idCategoria = $idCategoria;
-        $this->categoria = $categoria;
+        $this->nomeCategoria = $nomeCategoria;
     }
     
     public function getIdCategoria() {
         return $this->idCategoria;
     }
 
-    public function getCategoria() {
-        return $this->categoria;
+    public function getNomeCategoria() {
+        return $this->nomeCategoria;
     }
 
 }

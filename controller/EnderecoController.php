@@ -8,13 +8,13 @@ class EnderecoController implements iController{
             $endereco = new Endereco($idEndereco, $descricao, $logradouro, $numero, 
                     $cep, $bairro, $cidade, $uf, $idUsuario);
             self::salvar($endereco);
-        }elseif($method === "excluir") {
-            self::excluir($idEndereco);
-        }elseif ($method === "vazio") {
-            return new Endereco(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
         }
     }
     
+    public static function carregarVazio(){
+        return new Endereco(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+    }
+
     public static function buscarPorId($idEndereco) {
         try {
             $stmt = EnderecoDao::buscarPorId($idEndereco);
